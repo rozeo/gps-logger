@@ -13,6 +13,6 @@ $application = new \Rozeo\GpsLogger\Kernel\HttpApplication(
 );
 
 $application
-    ->bindController(\Rozeo\GpsLogger\Http\Controllers\IndexController::class)
-    ->bindController(\Rozeo\GpsLogger\Http\Controllers\MirrorController::class)
+    ->bindController(\Rozeo\GpsLogger\Http\Controller\IndexController::class)
+    ->bindController(\Rozeo\GpsLogger\Http\Controller\MirrorController::class)
     ->handle();

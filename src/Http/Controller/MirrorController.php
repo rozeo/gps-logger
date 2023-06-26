@@ -1,13 +1,13 @@
 <?php
 
-namespace Rozeo\GpsLogger\Http\Controllers;
+namespace Rozeo\GpsLogger\Http\Controller;
 
 use Nyholm\Psr7\Factory\Psr17Factory;
 use Psr\Http\Message\ResponseFactoryInterface;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Message\StreamFactoryInterface;
-use Rozeo\GpsLogger\Http\Requests\MirrorRequest;
+use Rozeo\GpsLogger\Http\Request\MirrorRequest;
 
 class MirrorController implements ControllerInterface
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Rozeo\GpsLogger\Http\Controllers;
+namespace Rozeo\GpsLogger\Http\Controller;
 
 use Nyholm\Psr7\Factory\Psr17Factory;
 use Psr\Http\Message\ResponseFactoryInterface;

@@ -6,7 +6,7 @@ use Psr\Container\ContainerInterface;
 use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\ResponseFactoryInterface;
 use Psr\Http\Message\ServerRequestFactoryInterface;
-use Rozeo\GpsLogger\Http\Controllers\ControllerInterface;
+use Rozeo\GpsLogger\Http\Controller\ControllerInterface;
 
 class HttpApplication
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Rozeo\GpsLogger\Http\Controllers;
+namespace Rozeo\GpsLogger\Http\Controller;
 
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\RequestHandlerInterface;
