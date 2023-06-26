@@ -7,11 +7,13 @@ use Psr\Http\Message\ResponseFactoryInterface;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Message\StreamFactoryInterface;
+use Rozeo\GpsLogger\Http\Request\Factory\MirrorRequestFactory;
 use Rozeo\GpsLogger\Http\Request\MirrorRequest;
 
 class MirrorController implements ControllerInterface
 {
     public function __construct(
+        private readonly MirrorRequestFactory $requestFactory,
         private readonly ResponseFactoryInterface $responseFactory,
         private readonly StreamFactoryInterface $streamFactory,
     )
@@ -22,12 +24,12 @@ class MirrorController implements ControllerInterface
     public function isTarget(ServerRequestInterface $serverRequest): bool
     {
         return $serverRequest->getMethod() === 'GET' &&
-            MirrorRequest::matchRegex($serverRequest);
+            $this->requestFactory->isMatch($serverRequest);
     }
 
     public function handle(ServerRequestInterface $request): ResponseInterface
     {
-        $request = MirrorRequest::create($request);
+        $request = $this->requestFactory->create($request);
 
         $obj = [
             'id' => $request->id,
